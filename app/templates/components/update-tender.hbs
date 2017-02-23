@@ -1,0 +1,45 @@
+
+{{#if updateTenderForm}}
+<div>
+  <form>
+    <div class="form-group">
+      <label for="companyname">Company Name:</label>
+      {{input value=companyname placeholder=agriculture.companyname id="companyname"}}
+    </div>
+    <div class="form-group">
+      <label for="details">Deatils:</label>
+      {{ input value= details id="details"}}
+    </div>
+    <div class="form-group">
+      <label for="tender_no">Tender No:</label>
+      {{input value=tender_no  id="tender_no"}}
+    </div>
+    <div class="form-group">
+      <label for="open_dates">Open Dates:</label>
+      {{input value=open_dates  id="open_dates"}}
+    </div>
+    <div class="form-group">
+      <label for="close_dates">Close Dates:</label>
+      {{input value=close_dates  id="close_dates"}}
+    </div>
+
+        <!-- <button {{action 'saveAgriculture1'}}> save agriculture</button> -->
+  <div >
+<button type="button" class="btn btn-info navbar-btn" {{action 'update' agriculture.id}}>UPDATE AGRICULTURE</button></div>
+        <!-- <div>  <button type="button" class="btn btn-success navbar-btn"{{action 'update' health}}> UPDATE IT</button></div>
+        <div>  <button type="button" class="btn btn-info navbar-btn" {{action 'update' it}}> UPDATE HEALTH</button></div>
+        <div>  <button type="button" class="btn btn-success navbar-btn" {{action 'update' supply}}> UPDATE SUPPLIES</button></div>
+        <div>  <button type="button" class="btn btn-info navbar-btn" {{action 'update' other}}> UPDATE OTHERS</button></div> -->
+
+  </form>
+</div>
+{{else}}
+  <div>  <button type="button" class="btn btn-success navbar-btn" {{action 'updateTenderForm'}}> UPDATE TENDER</button>
+</div>
+{{/if}}
+
+
+
+
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'index'}}Home{{/link-to}}
